@@ -1,0 +1,23 @@
+In this approach, an external class "owns" the relationship, so
+instances of Student and GradeReport can be created and inserted
+to each other under external management.
+
+Management takes place in StudentGradeReportFactory
+and shows in this case how the 1:1 relationship
+can be created using 2 setters.
+
+The 1:1 relationship cannot be broken by creating
+instances of GradeReport or Student outside the factory
+because their construcotrs have only package level access,
+and the package contains only classes concerned with
+this relationship.
+
+Note that using two setters are not reliable if
+it is necessary for a developer to remember to
+perform the two set operations. However here,
+the process of establishing the operation is
+outside of developer control -- encapsulate in this
+package.
+
+
+

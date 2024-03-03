@@ -1,0 +1,12 @@
+In this approach, Student "owns" the relationship, so
+Student must be created first, and the 1-1 relationship
+between Student and GradeReport can be established.
+
+However, unless GradeReport constructor has reduced
+visibility, it will still be possible to construct
+a GradeReport first and violate the 1:1 requirement
+
+  GradeReport r = new GradeReport(null);
+  
+To prevent this, GradeReport constructor has been
+given only package level access

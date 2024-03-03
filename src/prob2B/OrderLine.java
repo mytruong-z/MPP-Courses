@@ -1,15 +1,17 @@
-package prob2B;
+package lesson2.labsolns.prob2B;
 
 public class OrderLine {
-    private String OrderItemNo;
-    private Order order;
-
-    OrderLine(Order order, String orderItemNo) {
-        this.order = order;
-        this.OrderItemNo = orderItemNo;
-    }
-
-    public String getItemNo() {
-        return OrderItemNo;
-    }
+	private int lineNum;
+	private double price;
+	private int quantity;
+	private Order order;
+	OrderLine(int lineNum, double price, int quantity, Order order) {
+		this.lineNum = lineNum;
+		this.price = price;
+		this.quantity = quantity;
+		this.order = order;
+	}
+	public String toString() {
+		return "  line item: \n"  + "    line num = " + lineNum + "    price = " + price + "    quantity = "+ quantity;
+	}
 }
