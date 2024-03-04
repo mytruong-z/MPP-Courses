@@ -1,22 +1,26 @@
 package lab5.src.prob3.extpackage;
 
-import lab5.src.prob3.Customer;
+import lab5.src.prob3.CustOrderFactory;
 import lab5.src.prob3.Order;
+import lab5.src.prob3.Customer;
 
 import java.time.LocalDate;
 
 public class Main {
 	public static void main(String[] args) {
 		Customer cust = new Customer("Bob");
-		Order order = Order.newOrder(cust, LocalDate.now());
+		Order order = CustOrderFactory.newOrder(cust, LocalDate.now());
 		order.addItem("Shirt");
 		order.addItem("Laptop");
-
-		order = Order.newOrder(cust, LocalDate.now());
 		order.addItem("Pants");
-		order.addItem("Knife set");
+		System.out.println(order);
 
-		System.out.println(cust.getOrders());
+		Customer cust2 = new Customer("Bob2");
+		Order order2 = CustOrderFactory.newOrder(cust2, LocalDate.now());
+		order2.addItem("Pencil");
+		order2.addItem("Notebook");
+		order2.addItem("Backpack");
+		System.out.println(order2);
 	}
 }
 
