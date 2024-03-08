@@ -1,0 +1,2 @@
+It's not wrong because some people have the same salary, but not the same visited status.
+noDupsList: [(Richard, 55000, true), (John, 30000, false), (Steve, 30000, true), (Zeke, 50000, false), (Reggie, 50000, false), (John, 70000, true), (Harold, 55000, false), (Richard, 55000, true), (Richard, 60000, false), (Dennis, 80000, false), (Adam, 80000, false), (Charles, 25000, false), (Bill, 60000, false), (Bob, 60000, true), (Bill, 70000, false)]

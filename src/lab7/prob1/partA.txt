@@ -1,0 +1,9 @@
+A. In an earlier lesson, it was mentioned that Java’s ArrayList implements 6 interfaces and
+extends one class. What are they?
+
+1. Serializable
+2. Cloneable
+3. Iterable<E>
+4. Collection<E>
+5. List<E>
+6. RandomAccess
