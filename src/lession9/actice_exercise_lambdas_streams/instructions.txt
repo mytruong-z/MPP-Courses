@@ -1,0 +1,14 @@
+The problems to solve are in package named, pipeline, in startup-code folder.
+
+The classes you will query, like Employee and Address etc., are all contained
+in the quizclasses package. Test data is created in the two "test data"
+classes in that package -- to get test data, call either getList (on EmployeeTestData)
+or getTransactions (on TraderTransactTestData).
+
+In the pipeline package, there is a file named, lesson9.demo.actice_exercise_lambdas_streams.pipeline.Main.java. It contains 3 problems in the form
+of methods prob1(), prob2(), prob3(). Each needs to be solved with
+a pipeline of stream operations, only; the requirement and instructions for each are in the comments above each method.
+
+At the top of the main method you will see a solved sample problem.
+When you run the main method, it will run the sample and then
+execute the methods, prob1(), prob2(), prob3(), that follows.

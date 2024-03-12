@@ -6,7 +6,7 @@ import java.util.List;
 
 public class SRMAppMain {
     public static void main(String[] args) {
-        Supplier supplier = new Supplier("SS0013", "Argos Fruit Supplies", "(641) 451-0098", "1000 N Main Street", "Fairfield", "IA", "52556-0001", 3128874119L, "Banana", LocalDate.of(2023, 1, 1), 123, 1.99);
+        Supplier supplier = new Supplier("SS0013", "Argos Fruit Supplies", "(641) 451-0098", "1000 N lesson9.demo.actice_exercise_lambdas_streams.pipeline.Main Street", "Fairfield", "IA", "52556-0001", 3128874119L, "Banana", LocalDate.of(2023, 1, 1), 123, 1.99);
         supplier.addNewProduct(3128874119L, "Banana", LocalDate.of(2023, 1, 1), 123, 1.99);
         supplier.addNewProduct(3128874119L, "Apple", LocalDate.of(2023, 1, 1), 123, 1.99);
 
