@@ -1,0 +1,20 @@
+a. First fragment:
+    List<Integer> ints = new ArrayList<>();
+    ints.add(1);
+    ints.add(2);
+    List<Number> nums = ints; // Compiler error here
+    nums.add(3.14);
+
+--> The error occurs because List<Integer> cannot be directly assigned to List<Number> even though Integer is a subtype of Number.
+This is due to Java's generics invariance.
+
+ b. Second fragment:
+    List<Integer> ints = new ArrayList<>();
+    ints.add(1);
+    ints.add(2);
+    List<? extends Number> nums = ints;
+    nums.add(3.14); // Compiler error here
+
+--> The error is because you cannot add to a list declared with ? extends Number. This is because Java cannot guarantee
+what the actual list type is, so it prevents you from potentially adding incompatible types.
+

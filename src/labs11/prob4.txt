@@ -1,0 +1,28 @@
+a. First block of code:
+
+```java
+    List<Integer> ints = new ArrayList<>();
+    ints.add(1);
+    ints.add(2);
+    List<? extends Number> nums = ints;
+    double dbl = sum(nums); // This line is fine
+    nums.add(3.14); // Compiler error here
+```
+--> There is no compiler error in the line double dbl = sum(nums); because the sum method expects a Collection<? extends Number>, and List<? extends Number> matches this requirement since ints is a List<Integer> which is a subtype of Number.
+    The compiler error occurs at nums.add(3.14);.
+    The reason for this is that nums is a List<? extends Number>, meaning it can accept a list of any class that extends Number, but due to Java's type safety, you cannot add to such a list because Java cannot determine what the actual type is (it could be a List of Integer, Double, etc.).
+
+ b. Second block of code:
+
+```java
+    List<Object> objs = new ArrayList<>();
+    objs.add(1);
+    objs.add("two");
+    List<? super Integer> ints = objs;
+    ints.add(3); // This line is fine
+    double dbl = sum(ints); // Compiler error here
+```
+
+--> ints.add(3); is fine because ints is a List<? super Integer>, meaning it can accept Integer values (since Integer is a "super" type of Integer — in this context, it just means Integer itself or any of its superclasses, which includes Object).
+    The compiler error occurs at double dbl = sum(ints);. The reason is that the sum method expects a Collection<? extends Number>, but ints is declared as List<? super Integer>, which does not match the expected type.
+    List<? super Integer> could be a list of Object, Number, or any superclass of Integer, and those types do not necessarily extend Number, which makes them incompatible with the sum method's parameter.
